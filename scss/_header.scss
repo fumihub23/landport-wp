@@ -1,0 +1,57 @@
+.site-header {
+  width: 100%;
+  height: 150px;
+
+  .inner {
+    height: inherit;
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .site-branding {
+      width: 163px;
+    }
+
+    .main-navigation {
+      ul {
+        @include flex;
+        align-items: center;
+
+        li {
+          margin-right: 30px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            position: relative;
+            display: inline-block;
+            color: #585858;
+            @include roboto;
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: -4px;
+              background: #585858;
+              width: 0;
+              height: 1px;
+              transition: 0.3s;
+            }
+
+            &:hover {
+              text-decoration: none;
+
+              &:before {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media #{$sp} {}

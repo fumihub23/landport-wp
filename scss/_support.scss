@@ -1,0 +1,92 @@
+.support {
+  margin: 0 auto 100px;
+
+  .inner {
+    width: 100%;
+  }
+
+  .support-area {
+    @include flex;
+    align-items: flex-start;
+    width: 100%;
+
+    .left {
+      width: 25%;
+      @include flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      padding-right: 30px;
+    }
+
+    .right {
+      width: 70%;
+
+      .line_space {
+        @include font-size(14);
+        line-height:200%;
+        margin-bottom: 55px;
+      }
+
+      .side_by_side {
+        margin-bottom: 55px;
+        
+        li{
+          @include font-size(14);
+          display: inline-block;
+        }
+
+        .right_li {
+          vertical-align: bottom;
+          margin-left: 35px;
+          margin-bottom: 20px;
+
+          .lanthanum_inquiry {
+            line-height:200%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+          }
+
+          .other_title {
+            @include font-size(27);
+            @include roboto;
+            font-weight: 300;
+          }
+
+          .other_inquiry {
+            line-height:200%;
+            margin-top: 40px;
+            margin-bottom: 60px;
+          }
+        }
+      }
+
+      .support_button {
+        background: #F8F8F8;
+        padding: 20px 160px;
+        text-decoration: none;
+        border-radius: 50px;
+        border: 1px solid #707070;
+      }
+    }
+
+    .support-title-box {
+      .support-title {
+        span {
+          display: block;
+
+          &.en {
+            @include font-size(40);
+            @include roboto;
+            font-weight: 300;
+          }
+
+          &.jp {
+            @include font-size(26);
+          }
+        }
+      }
+    }
+  }
+}
+@media #{$sp} {}

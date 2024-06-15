@@ -1,0 +1,44 @@
+@charset "UTF-8";
+$laptop: "(max-width:1200px) and ( min-width:768px)";
+$tb: "(max-width:1100px) and ( min-width:768px)";
+$sp: "(max-width: 767px)";
+@mixin noto-300 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+}
+@mixin noto-400 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+}
+@mixin noto-500 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+}
+@mixin noto-600 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 600;
+}
+@mixin noto-700 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+}
+@mixin Poppins {
+  font-family: 'Poppins', sans-serif;
+}
+@mixin roboto {
+  font-family: 'Roboto', sans-serif;
+}
+@mixin lato {
+  font-family: 'Lato', sans-serif;
+}
+@mixin site {
+  font-family: "Noto Sans JP", "Yu Gothic", "Meiryo", "Hiragino Sans"," Hiragino Kaku Gothic ProN", sans-serif;
+}
+@mixin font-size($size, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) + rem;
+}
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,438 @@
+/*!
+Theme Name: landport
+Theme URI: http://underscores.me/
+Author: anicecompany
+Author URI: https://anicecompany.co.jp/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: landport
+
+*/
+@import "_normalize.scss";
+@import "_mixins.scss";
+@import "_swiper.scss";
+@import "_hum.scss";
+@import "_company.scss";
+@import "_contact.scss";
+@import "_news.scss";
+@import "_support.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "_top.scss";
+
+html {
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  color: #585858;
+  @include site;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+}
+//selection
+
+::selection {
+  color: #fff;
+  background: #000;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #222;
+}
+
+input::selection,
+textarea::selection {
+  color: #fff;
+  background: #222;
+}
+//Elements
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  background: #F8F8F8;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+}
+
+em {
+  font-style: normal;
+}
+
+figure {
+  margin: 0;
+}
+
+li,
+ul {
+  list-style-type: none;
+}
+
+dd,
+dl,
+dt,
+li,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+.br-pc {
+  display: block;
+}
+
+.br-tb {
+  display: none;
+}
+
+.br-sp {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+//Links
+
+a,
+a:visited {
+  color: #585858;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #585858;
+  text-decoration: none;
+}
+
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+.button {
+  a {
+    display: inline-block;
+    border: 1px solid #989898;
+    color: #585858;
+    padding: 10px 33px;
+    border-radius: 30px;
+    text-align: center;
+    @include font-size(13);
+
+    .icn-link {
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -20px;
+        bottom: 0;
+        margin: auto;
+        background: url("./img/common/icn_link.svg") no-repeat 50% / cover;
+        width: 12px;
+        height: 9px;
+      }
+    }
+  }
+}
+
+.acc-toggle {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.slideUp {
+  transform: translateY(-30px);
+  transition: transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s, opacity 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s;
+  opacity: 0;
+
+  &.slideUp-on {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* panel animation  end */
+.scaleUp2 {
+  transform: scale(1.3);
+  transition: transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s;
+
+  &.scaleUp-on {
+    transform: scale(1);
+  }
+}
+
+.scaleUp {
+  transform: scale(1.3);
+  transition: transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s, opacity 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s;
+  opacity: 0;
+
+  &.scaleUp-on {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fadeUp {
+  transform: translateY(30px);
+  transition: transform 1.25s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s, opacity 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s;
+  opacity: 0;
+
+  &.fadeUp-on {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  transition: opacity 1.25s ease-in-out;
+  opacity: 0;
+
+  &.fadeIn-on {
+    opacity: 1;
+  }
+}
+
+.fadeUpY {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.inner {
+  width: 90%;
+  margin: auto;
+}
+
+.pagenation {
+  margin: 50px auto 0;
+  @include flex;
+  align-items: center;
+  justify-content: center;
+
+  .next,
+  .prev {
+    a {
+      position: relative;
+      display: inline-block;
+      border-radius: 50%;
+
+      &:hover {
+        background: #e4e4e4;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: hsla(0,0%,100%,.6);
+          animation: hoverlink-effect 1s forwards;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+
+  .prev {
+    margin-right: 40px;
+  }
+
+  .next {
+    margin-left: 40px;
+  }
+
+  ul {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      margin-right: 30px;
+      @include font-size(16);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active {
+        border-bottom: 1px solid #a5af46;
+      }
+
+      a {
+        position: relative;
+        @include font-size(16);
+
+        &:hover {}
+      }
+    }
+  }
+}
+@media #{$laptop} {
+  .main-navigation {
+    margin-left: 0;
+
+    .menu {
+      > li {
+        position: relative;
+      }
+    }
+  }
+}
+@media #{$tb} {
+  .br-tb {
+    display: block;
+  }
+}
+@media #{$sp} {
+  .pc-only {
+    display: none;
+  }
+
+  .br-tb {
+    display: block;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  .br-pc {
+    display: none;
+  }
+
+  .br-sp {
+    display: block;
+  }
+
+  .acc-toggle {
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      background: #222;
+      transition: 0.5s ease;
+    }
+
+    &:before {
+      top: -5px;
+      right: 0;
+      width: 15px;
+      height: 1px;
+    }
+
+    &:after {
+      top: -12px;
+      right: 6px;
+      width: 1px;
+      height: 14px;
+    }
+  }
+
+  .pagenation {
+    margin: 50px auto 80px;
+    @include flex;
+    align-items: center;
+    justify-content: center;
+
+    .prev {
+      margin-right: 40px;
+    }
+
+    .next {
+      margin-left: 40px;
+    }
+
+    ul {
+      @include flex;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        margin-right: 30px;
+        @include font-size(15);
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.active {
+          border-bottom: 1px solid #a5af46;
+        }
+
+        a {
+          @include font-size(15);
+        }
+      }
+    }
+  }
+}

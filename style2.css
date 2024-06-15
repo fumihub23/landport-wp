@@ -1,0 +1,60 @@
+@charset 'UTF-8';
+
+.company .philosophy-area {
+  margin-bottom: 100px;
+}
+.company .philosophy-area .right dl {
+  margin-bottom: 70px;
+}
+.company .philosophy-area .right dl dt {
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: #989898;
+}
+.company .philosophy-area .right dl dd {
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin-top: 17px;
+}
+.company .philosophy-area .right dl dd ul li {
+  margin-bottom: 30px;
+  font-size: 17px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+.company .philosophy-area .right dl dd ul li strong {
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 7px;
+}
+
+@media (max-width: 980px) {
+  .company .philosophy-area {
+    margin-bottom: 50px;
+  }
+  .company .philosophy-area .right {
+    margin-top: 10px;
+  }
+  .company .philosophy-area .right dl {
+    margin-bottom: 70px;
+  }
+  .company .philosophy-area .right dl dt {
+    font-size: 15px;
+  }
+  .company .philosophy-area .right dl dd {
+    font-size: 20px;
+    margin-top: 17px;
+  }
+  .company .philosophy-area .right dl dd ul li {
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+  .company .philosophy-area .right dl dd ul li strong {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}

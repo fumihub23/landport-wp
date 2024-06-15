@@ -1,0 +1,47 @@
+.contact-title span {
+  @include font-size(34);
+}
+
+.contact-container {
+  text-align: center;
+
+  .contact-message {
+    @include font-size(15);
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .contact_name,
+  .contact_mail,
+  .contact_tel,
+  .contact_subject {
+    width: 742px;
+    height: 54px;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .contact_textarea {
+    resize: none;
+    width: 742px;
+    height: 335px;
+    padding: 15px;
+  }
+
+  .contact_send_mail {
+    @include font-size(15);
+    background: #585858;
+    color: #fff;
+    border-color: transparent;
+    padding: 20px 120px;
+    border-radius: 50px;
+    margin-top: 45px;
+    margin-bottom: 330px;
+  }
+}
+
+.sec-contact{
+  display: none;
+}
+
+@media #{$sp} {}
